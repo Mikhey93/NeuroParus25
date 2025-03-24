@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/gothampro/GothamPro.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('../fonts/gothampro_Regular.ttf') format('ttf'),
+		url('../fonts/GothamPro_Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/gothampro/GothamPro-Medium.eot');
+	src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+		url('../fonts/gothampro_medium.ttf') format('ttf'),
+		url('../fonts/GothamPro-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/gothampro/GothamPro-Bold.eot');
+	src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/gothampro_bold.ttf') format('ttf'),
+		url('../fonts/GothamPro-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'ALS Schlange Sans';
+    src: local('ALS Schlange Sans Black'), local('ALS-Schlange-Sans-Black'),
+        url('../fonts/ALSSchlangesans-Black.ttf') format('ttf'),
+        url('../fonts/ALSSchlangesans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
