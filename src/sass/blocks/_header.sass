@@ -1,0 +1,40 @@
+.header
+  padding-top: 20px
+  &__top-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logotype
+    max-width: 200px
+  &__address
+    display: flex
+    align-items: center
+  &__divider
+    background: var(--dark-text)
+    width: 100%
+    height: 1px
+    margin-top: 20px
+  &__menu
+    margin-top: 20px
+    &-list
+      display: flex
+      justify-content: center
+      align-items: center
+    &-item
+      &:not(:last-child)
+        margin-right: 50px
+    &-link
+      font-weight: 500
+      font-size: 16px
+      text-decoration: none
+      text-transform: uppercase
+
+.contacts-data__text
+  font-weight: 400
+  font-size: 18px
+  color: var(--dark-text)
+
+.contacts-data__link
+  font-weight: 700
+  font-size: 18px
+  text-decoration: underline
