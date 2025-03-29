@@ -1,0 +1,36 @@
+.services-parents
+  padding: 20px 0
+  &__title
+    font-size: 35px
+    text-align: center
+  &__content-wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: start
+    margin-top: 40px
+  &__accordion-card
+    display: flex
+    align-items: left
+    flex-direction: column
+    justify-content: center
+    width: 560px
+    padding: 30px 40px
+    &:not(:nth-child(1)), &:not(:nth-child(2))
+      margin-top: 20px
+    &_active
+      justify-content: start
+  // &__accordion-top
+  &__accordion-icon
+    margin-right: 10px
+  &__accordion-title
+    max-width: 400px
+    font-size: 25px
+    line-height: 1.2
+  &__accordion-bottom
+    margin-top: 15px
+  &__accordion-descr
+    margin-top: 10px
+  &__accordion-list
+    margin: 10px 0 0 15px
+  &__list-item

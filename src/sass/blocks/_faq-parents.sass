@@ -1,0 +1,31 @@
+.faq-parents
+  padding: 70px 0
+  &__title
+    font-size: 35px
+    text-align: center
+  &__content-wrapper
+    margin-top: 50px
+  &__accordion-card
+    position: relative
+    padding: 30px 40px
+    overflow: hidden
+    &:not(:first-child)
+      margin-top: 20px
+    &_active
+      &:before
+        position: absolute
+        content: ""
+        height: 100%
+        width: 25px
+        background: var(--dark-text)
+        left: 0
+        top: 0
+        transition: 0.5s all
+  &__accordion-icon
+    margin-right: 20px
+  &__accordion-title
+    max-width: 400px
+    font-size: 25px
+    line-height: 1.2
+  &__accordion-bottom
+    margin: 20px 0 0 60px
