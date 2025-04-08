@@ -45,7 +45,16 @@
       max-width: 350px
     &__img-wrapper
       max-width: 350px
-  // .programs-therapy
+  .programs-therapy
+    &__card
+      max-width: 278px
+      padding: 30px 25px
+      &-title
+        font-size: 24px
+      &-item
+        font-size: 16px
+      &-subtitle
+        font-weight: 500
   .after-therapy
     &__title
       font-size: 29px
@@ -176,7 +185,14 @@
       flex-direction: column
     &__img-wrapper
       margin-top: 20px
-  // .programs-therapy
+  .programs-therapy
+    &__content-wrapper
+      flex-wrap: wrap
+    &__card
+      max-width: 300px
+      &:last-child
+        margin: 20px auto 0
+
   .after-therapy
     &__content-wrapper
       flex-direction: column
@@ -357,6 +373,11 @@
     &__img:last-child
       max-width: 100%
       height: 300px
+  .programs-therapy
+    &__card
+      max-width: 100%
+      &:nth-child(2)
+        margin-top: 20px
   .reviews-therapy
     &__slider-img
       margin: 0 5px
