@@ -1,0 +1,80 @@
+.specialists
+  &-parents
+    padding: 70px 0
+    &__title
+      text-align: center
+      font-size: 35px
+    &__cards-wrapper
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-top: 30px
+    &__card
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      &:not(:nth-child(1)), &:not(:nth-child(2))
+        margin-top: 20px
+  &-tabs
+    &__content-wrapper
+      margin-top: 30px
+    &__titles-wrapper
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+
+.tab
+  &__title
+    padding: 10px 40px
+    margin-right: 10px
+    margin-top: 10px
+    border: 2px solid var(--dark-text)
+    border-radius: 20px
+    font-size: 18px
+    font-weight: 500
+    color: var(--dark-text)
+    cursor: pointer
+    &:hover
+      box-shadow: 0px 6px 21px rgba(79, 91, 135, 0.67)
+    &_active
+      background: var(--dark-text)
+      color: #ffffff
+
+.card
+  &__bottom
+    &-address
+      width: 100%
+      margin-top: 10px
+      background: var(--main-color)
+      padding: 8px 0
+      border-radius: 20px
+      text-align: center
+      color: #fff
+      font-size: 14px
+      font-weight: 500
+      text-transform: uppercase
+    &-btns
+      display: flex
+      justify-content: space-between
+      margin-top: 20px
+  &__btn
+    max-width: 230px
+    padding: 10px 20px
+    font-size: 14px
+    line-height: 1.2
+
+.price
+  &__title
+    margin-top: 10px
+    font-size: 17px
+    font-weight: 500
+    color: var(--dark-text)
+  &__list
+    &-item
+      display: flex
+      justify-content: space-between
+      &:not(:last-child)
+        border-bottom: 2px solid var(--dark-text)
+    &-service, &-cost
+      font-size: 16px
+      color: var(--dark-text)
