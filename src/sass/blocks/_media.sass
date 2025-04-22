@@ -112,6 +112,16 @@
       max-width: 158px
       font-size: 12px
 
+  // page specialists.html media
+
+  .specialists
+    &-about
+      &__card
+        width: 206px
+    &-gallery
+      &__photo
+        max-width: 243px
+
   // page contacts.html media
 
   .administrators-contacts
@@ -265,6 +275,24 @@
     &__btn
       margin: 0 10px
 
+  // page specialists.html media
+
+  .specialists
+    &-about
+      &__content-wrapper
+        justify-content: center
+      &__card
+        width: 198px
+        margin: 0 5px
+        &:not(:nth-child(-n+3))
+          margin-top: 10px
+    &-price
+      &__content-wrapper
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(3, 1fr)
+        grid-column-gap: 10px
+        grid-row-gap: 10px
+
   // page contacts.html media
 
   .administrators-contacts
@@ -296,6 +324,14 @@
   // header mobile menu
 
   .header
+    &__top-wrapper
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      z-index: 2
+      background: rgba(239, 242, 253, 0.9450980392)
+      padding: 10px
     &__bottom-wrapper
       position: fixed
       top: 0
@@ -308,6 +344,7 @@
       transition: 0.6s all
       &_active
         left: 0
+        z-index: 3
     &__menu
       &-list
         display: flex
@@ -440,6 +477,39 @@
   .specialists-parents__card
     width: 100%
 
+  // page specialists.html media
+
+  .specialists
+    &-promo
+      &__img-wrapper
+        width: 60%
+        justify-content: center
+      &__img
+        height: auto
+        max-width: 100%
+    &-about
+      &__card
+        width: 240px
+        &:not(:nth-child(-n+2))
+          margin-top: 10px
+    &-price
+      &__card
+        &-title
+          font-size: 20px
+          &_tc
+            font-size: 25px
+        &-cost
+          font-size: 16px
+          &_tc
+            font-size: 18px
+    &-gallery
+      &__photo
+        margin: 10px 0
+    &-rules
+      &__accordion
+        &-title
+          line-height: 1
+
   // page contacts.html media
 
   .promo-contacts
@@ -517,6 +587,32 @@
   .card__btn
     font-size: 10px
     padding: 5px
+
+  // page specialists.html media
+  .specialists
+    &-promo
+      &__img
+        height: auto
+    &-about__card
+      width: 100%
+      &:not(:nth-child(-n+1))
+        margin-top: 10px
+    &-price
+      &__content-wrapper
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(5, 1fr)
+        grid-column-gap: 0px
+        grid-row-gap: 10px
+      &__card
+        &:first-child
+          grid-area: 1
+    &-rules
+      &__accordion
+        &-card
+          padding: 20px 15px
+        &-title
+          width: 230px
+          font-size: 20px
 
   // page contacts.html media
 

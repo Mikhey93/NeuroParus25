@@ -1,0 +1,35 @@
+.specialists-price
+  padding: 0 0 70px
+  &__section-title
+    font-size: 35px
+    text-align: center
+  &__content-wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+    margin-top: 30px
+  &__card
+    padding: 30px
+    border-radius: 20px
+    background: var(--bg-color)
+    &:first-child
+      grid-area: 1 / 1 / 3 / 2
+      background: var(--main-color)
+  &__card-title
+    font-family: "ALS Schlange sans"
+    font-size: 25px
+    line-height: 1.2
+    color: var(--dark-text)
+    &_tc
+      font-size: 40px
+      color: #ffffff
+  &__card-cost
+    margin-top: 20px
+    color: var(--dark-text)
+    font-size: 18px
+    font-weight: 500
+    &_tc
+      font-size: 20px
+      color: #ffffff

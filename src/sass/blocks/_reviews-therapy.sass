@@ -4,14 +4,27 @@
   &__title
     font-size: 35px
     text-align: center
+  &__slider-wrapper
+    width: 75%
+    height: auto
+    overflow: hidden
+    margin: 50px auto
   &__slider
+    // display: flex
+    // justify-content: flex-start
+    // align-items: center
+    // overflow: hidden
+    // margin-top: 50px
     display: flex
     justify-content: flex-start
     align-items: center
-    overflow: hidden
-    margin-top: 50px
+    margin-top: 30px
+    transition: transform 0.3s ease
   &__slider-img
-    margin: 0 40px
+    // margin: 0 40px
+    flex-shrink: 0
+    width: 400px
+    margin: 0 13px // без отступов, для простоты
   &__arrows-wrapper
     margin-top: 10px
   &__video-wrapper
