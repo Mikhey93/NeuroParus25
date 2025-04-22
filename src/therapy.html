@@ -81,7 +81,7 @@
           <h2 class="subtitle promo__subtitle">Уникальная, авторская методика Влады Тарасенко. <br> Терапия заменяет
             часы работы с логопедами <br> и дефектологами</h2>
           <div class="promo__btn-wrapper">
-            <button class="btn promo__btn">Записаться</button>
+            <button class="btn promo__btn promo-therapy__btn">Записаться</button>
           </div>
           <div class="socials promo__socials-wrapper">
             <a href="" class="socials__link promo__socials-link">
@@ -234,28 +234,30 @@
   <section class="reviews-therapy">
     <div class="container">
       <h2 class="section-title reviews-therapy__title">Отзывы родителей о ВЧТ</h2>
-      <div class="reviews-therapy__slider">
-        <img src="img/therapy-page/reviews-therapy/reviews-therapy_7.png" alt="скриншот отзыва"
-          class="reviews-therapy__slider-img">
-        <img src="img/therapy-page/reviews-therapy/reviews-therapy_3.png" alt="скриншот отзыва"
-          class="reviews-therapy__slider-img">
-        <img src="img/therapy-page/reviews-therapy/reviews-therapy_1.png" alt="скриншот отзыва"
-          class="reviews-therapy__slider-img">
-        <img src="img/therapy-page/reviews-therapy/reviews-therapy_4.png" alt="скриншот отзыва"
-          class="reviews-therapy__slider-img">
-        <img src="img/therapy-page/reviews-therapy/reviews-therapy_5.png" alt="скриншот отзыва"
-          class="reviews-therapy__slider-img">
-        <img src="img/therapy-page/reviews-therapy/reviews-therapy_6.png" alt="скриншот отзыва"
-          class="reviews-therapy__slider-img">
-        <img src="img/therapy-page/reviews-therapy/reviews-therapy_2.png" alt="скриншот отзыва"
-          class="reviews-therapy__slider-img">
-      </div>
-      <div class="arrow-wrapper reviews-therapy__arrows-wrapper">
-        <div class="arrow arrow-left reviews-therapy__arrow">
-          <img src="icons/arrow-left.svg" alt="стрелка влево" class="arrow-left__img">
+      <div class="reviews-therapy__slider-wrapper">
+        <div class="reviews-therapy__slider">
+          <img src="img/therapy-page/reviews-therapy/reviews-therapy_7.png" alt="скриншот отзыва"
+            class="reviews-therapy__slider-img">
+          <img src="img/therapy-page/reviews-therapy/reviews-therapy_3.png" alt="скриншот отзыва"
+            class="reviews-therapy__slider-img">
+          <img src="img/therapy-page/reviews-therapy/reviews-therapy_1.png" alt="скриншот отзыва"
+            class="reviews-therapy__slider-img">
+          <img src="img/therapy-page/reviews-therapy/reviews-therapy_4.png" alt="скриншот отзыва"
+            class="reviews-therapy__slider-img">
+          <img src="img/therapy-page/reviews-therapy/reviews-therapy_5.png" alt="скриншот отзыва"
+            class="reviews-therapy__slider-img">
+          <img src="img/therapy-page/reviews-therapy/reviews-therapy_6.png" alt="скриншот отзыва"
+            class="reviews-therapy__slider-img">
+          <img src="img/therapy-page/reviews-therapy/reviews-therapy_2.png" alt="скриншот отзыва"
+            class="reviews-therapy__slider-img">
         </div>
-        <div class="arrow arrow-right reviews-therapy__arrow">
-          <img src="icons/arrow-right.svg" alt="стрелка вправо" class="arrow-right__img">
+        <div class="arrow-wrapper reviews-therapy__arrows-wrapper">
+          <div class="arrow arrow-left reviews-therapy__arrow">
+            <img src="icons/arrow-left.svg" alt="стрелка влево" class="arrow-left__img">
+          </div>
+          <div class="arrow arrow-right reviews-therapy__arrow">
+            <img src="icons/arrow-right.svg" alt="стрелка вправо" class="arrow-right__img">
+          </div>
         </div>
       </div>
       <div class="reviews-therapy__video-wrapper">
@@ -270,8 +272,6 @@
       </div>
     </div>
   </section>
-
-
 
   <footer class="footer">
     <div class="container footer__container">
@@ -354,7 +354,95 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+
+  <!-- Modals -->
+
+  <div class="overlay">
+    <!-- parents order modal -->
+    <div class="modal parents-modal" id="parents-modal" data-modal>
+      <div class="modal__close parents-modal__close">&times;</div>
+      <div class="modal__subtitle parents-modal__subtitle">Оставьте Ваши контактные данные</div>
+      <div class="modal__descr parents-modal__descr">и мы перезвоним в рабочее время</div>
+      <form class="form parents-form" action="#">
+        <select id="specialist-choice" name="specialist-kind">
+          <option value="Psychologist">Психолог</option>
+          <option value="Educational psychologist">Педагог-психолог</option>
+          <option value="Clinical psychologist">Клинический психолог</option>
+          <option value="Integrative psychologist">Интегративный психолог</option>
+          <option value="Consulting psychologist">Консультирующий психолог</option>
+          <option value="Neuropsychologist">Нейропсихолог</option>
+          <option value="Sensory Integration">Сенсорная интеграция</option>
+          <option value="Logopedist">Логопед</option>
+          <option value="Speech pathologist">Логопед-дефектолог</option>
+          <option value="Gestalt therapist">Гештальт-терапевт</option>
+          <option value="Art therapist">Арт-терапевт</option>
+          <option value="Mentor">Работа с детьми</option>
+          <option value="Other">Другое</option>
+        </select>
+        <input name="parent-name" placeholder="Ваши ФИО" type="text">
+        <input name="child-name" placeholder="Имя ребенка" type="text">
+        <input name="parent-phone" placeholder="Ваш телефон">
+        <input name="parent-email" placeholder="Ваша почта" type="email">
+        <button class="btn btn_submit parents-form__submit">Записаться на прием</button>
+      </form>
+    </div>
+    <!-- question modal -->
+    <div class="modal question-modal" id="question-modal" data-modal>
+      <div class="modal__close question-modal__close">&times;</div>
+      <div class="modal__subtitle question-modal__subtitle">Остались вопросы?</div>
+      <div class="modal__descr question-modal__descr">Оставьте контактные данные и мы перезвоним в рабочее время
+      </div>
+      <form class="form question-form" action="#">
+        <select id="question-choice" name="question-kind">
+          <option value="Specialist">Я – специалист</option>
+          <option value="Parent">Я – родитель</option>
+        </select>
+        <input name="person-name" placeholder="Ваши ФИО" type="text">
+        <input name="person-phone" placeholder="Ваш телефон">
+        <input name="person-email" placeholder="Ваша почта" type="email">
+        <textarea name="question-text" cols="30" placeholder="Ваш вопрос"></textarea>
+        <button class="btn btn_submit question-form__submit">Задать вопрос</button>
+      </form>
+    </div>
+    <!-- specialists modal -->
+    <div class="modal specialist-modal" id="specialist-modal" data-modal>
+      <div class="modal__close specialist-modal__close">&times;</div>
+      <div class="modal__subtitle specialist-modal__subtitle">Выберите коворкинг и оставьте Ваши контакты</div>
+      <div class="modal__descr specialist-modal__descr">Мы перезвоним Вам в рабочее время</div>
+      <form class="form specialist-form" action="#">
+        <select id="address-choice" name="address-kind">
+          <option value="Voroshilova">ул. Ворошилова д.12а</option>
+          <option value="Rileeva">ул. Рылеева д.2В</option>
+        </select>
+        <select id="profession-choice" name="profession-kind">
+          <option value="Specialist-psychologist">Психология</option>
+          <option value="Specialist-Neuropsychologist">Нейропсихология</option>
+          <option value="Specialist-sensory">Сенсорная интеграция</option>
+          <option value="Specialist-logopedist">Логопедия</option>
+          <option value="Specialist-art">Арт-терапия</option>
+          <option value="Specialist-mentor">Работа с детьми</option>
+          <option value="Specialist-other">Другое</option>
+        </select>
+        <input name="specialist-name" placeholder="Ваши ФИО" type="text">
+        <input name="specialist-phone" placeholder="Ваш телефон">
+        <input name="specialist-email" placeholder="Ваша почта" type="email">
+        <button class="btn btn_submit specialist-form__submit">Забронировать коворкинг</button>
+      </form>
+    </div>
+    <!-- thanks modal -->
+    <div class="modal thanks-modal" id="thanks" data-modal>
+      <div class="modal__close thanks-modal__close">&times;</div>
+      <div class="modal__subtitle thanks-modal__subtitle">Спасибо за Вашу заявку!</div>
+      <div class="modal__descr thanks-modal__descr">Наш менеджер свяжется с Вами в ближайшее время!</div>
+    </div>
+  </div>
+
+  <!-- Page up icon -->
+  <a href="#up" class="pageup">
+    <img src="" alt="иконка вверх">
+  </a>
+
+  <script src="js/script.js" type="module"></script>
 </body>
 
 </html>
