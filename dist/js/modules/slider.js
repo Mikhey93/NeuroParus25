@@ -4,10 +4,7 @@ const slider = (sliderSelector, imgSelector, leftArrowSelector, rightArrowSelect
   const btnLeft = document.querySelector(leftArrowSelector);
   const btnRight = document.querySelector(rightArrowSelector);
 
-  if (!slider || images.length === 0 || !btnLeft || !btnRight) {
-    console.warn('Слайдер не найден или элементы отсутствуют');
-    return;
-  }
+  if (!slider || images.length === 0 || !btnLeft || !btnRight) return;
 
   const visibleSlides = 2;
   const style = getComputedStyle(images[0]);
