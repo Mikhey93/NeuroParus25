@@ -16,6 +16,19 @@
 .container
     max-width: 1140px
     margin: 0 auto
+.pageup
+    position: fixed
+    right: 30px
+    bottom: 30px
+    display: none
+    width: 70px
+    height: 70px
+    z-index: 1000
+    img
+        width: 100%
+        cursor: pointer
+    &.show
+        display: block
 
 // elements style
 @import 'blocks/buttons'
@@ -29,6 +42,7 @@
 @import 'blocks/forms'
 @import 'blocks/modals'
 @import 'blocks/accordion'
+@import 'blocks/info-modals'
 // page index 
 @import 'blocks/promo'
 @import 'blocks/socials'
