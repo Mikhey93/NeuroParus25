@@ -1,39 +1,38 @@
 const accordion = (cardSelector, topCardSelector, bottomCardSelector, iconSelector, newIconClass, newBottomClass) => {
-  const accordionCards = document.querySelectorAll(cardSelector);
-
-  accordionCards.forEach(card => {
-    const accordionTop = card.querySelector(topCardSelector);
-    const accordionIcon = card.querySelector(iconSelector);
-    const accordionBottom = card.querySelector(bottomCardSelector);
-
-
-    accordionCards.forEach(card => {
-      const accordionIcon = card.querySelector(iconSelector);
-      const accordionBottom = card.querySelector(bottomCardSelector);
-
-      card.addEventListener('click', function () {
-        accordionCards.forEach(otherCard => {
-          if (otherCard !== card) {
-            otherCard.querySelector(iconSelector).classList.remove(newIconClass);
-            otherCard.querySelector(bottomCardSelector).classList.remove(newBottomClass);
-          }
-        });
-
-        const isActive = accordionBottom.classList.contains(newBottomClass);
-
-        if (isActive) {
-          accordionIcon.classList.remove(newIconClass);
-          accordionBottom.classList.remove(newBottomClass);
-        } else {
-          accordionIcon.classList.add(newIconClass);
-          accordionBottom.classList.add(newBottomClass);
-        }
-      });
-    });
+  const accordionCards = [...document.querySelectorAll(cardSelector)].map(card => {
+    return {
+      card,
+      top: card.querySelector(topCardSelector),
+      icon: card.querySelector(iconSelector),
+      bottom: card.querySelector(bottomCardSelector),
+    };
   });
 
-}
+  accordionCards.forEach(({ card, icon, bottom }) => {
+    if (!icon || !bottom) return;
 
+    card.addEventListener('click', function () {
+      // Закрываем все остальные аккордеоны
+      accordionCards.forEach(other => {
+        if (other.card !== card) {
+          if (other.icon && other.bottom) {
+            other.icon.classList.remove(newIconClass);
+            other.bottom.classList.remove(newBottomClass);
+          }
+        }
+      });
+
+      const isActive = bottom.classList.contains(newBottomClass);
+
+      if (isActive) {
+        icon.classList.remove(newIconClass);
+        bottom.classList.remove(newBottomClass);
+      } else {
+        icon.classList.add(newIconClass);
+        bottom.classList.add(newBottomClass);
+      }
+    });
+  });
+};
 
 export default accordion;
-
