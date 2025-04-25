@@ -76,7 +76,7 @@ const modals = () => {
   bindModal('.promo-therapy__btn', '.parents-modal', '.parents-modal__close');
   // Modals at parents.html page
   bindModal('.promo-parents__btn', '.parents-modal', '.parents-modal__close');
-  bindModal('.card__btn', '.parents-modal', '.parents-modal__close');
+  bindModal('.card__btn-modal', '.parents-modal', '.parents-modal__close');
   // Modals at specialists.html page
   bindModal('.specialists-promo__btn', '.specialist-modal', '.specialist-modal__close');
   // Modals at contacts.html page
