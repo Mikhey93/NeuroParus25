@@ -317,6 +317,17 @@
     &__form
       input, select
         width: 100%
+
+  // info modal media
+
+  .info-modal
+    width: 600px
+    &__img-wrapper
+      flex-direction: column
+      max-width: 100%
+      img
+        max-width: 100%
+
 @media (max-width: 767px)
   .container
     max-width: 500px
@@ -527,7 +538,17 @@
     &__card-text, &__map
       font-size: 16px
 
+  // info modal media
+
+  .info-modal
+    width: 450px
+
 @media (max-width: 575px)
+  .pageup
+    right: 10px
+    bottom: 10px
+    width: 50px
+    height: 50px
   .container
     max-width: 350px
 
@@ -641,3 +662,39 @@
   .question-contacts
     &__title
       font-size: 25px
+
+  // parents-modal media
+
+  .parents, .specialist
+    &-modal
+      width: 345px
+      padding: 35px 20px 40px 20px
+      &__subtitle
+        font-size: 25px
+      &__close
+        top: 10px
+        font-size: 35px
+    &-form
+      select, input
+        padding: 10px
+      input
+        margin-top: 10px
+      &__submit
+        font-size: 12px
+        padding: 15px 0
+
+  // info modal media
+
+  .info-modal
+    width: 340px
+    height: 500px
+    padding: 30px 20px 20px
+    &__close
+      top: 5px
+      font-size: 20px
+    &__list
+      margin-top: 10px
+      &-item
+        font-size: 14px
+    &__text_b, &__text
+      font-size: 16px
