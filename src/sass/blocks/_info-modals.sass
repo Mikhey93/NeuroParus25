@@ -1,0 +1,47 @@
+.info-modal
+  display: none
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  max-width: 800px
+  height: 600px
+  background-color: var(--bg-color)
+  padding: 58px 40px 40px 40px
+  border-radius: 20px
+  overflow-y: scroll
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    font-size: 40px
+    line-height: 21px
+    color: var(--dark-text)
+    cursor: pointer
+  &__text-wrapper
+    margin-top: 20px
+  &__text
+    margin-top: 20px
+    color: var(--dark-text)
+  &__text_b
+    margin-top: 20px
+    font-size: 20px
+    font-weight: 500
+    color: var(--dark-text)
+  &__list
+    margin-top: 20px
+    padding-left: 20px
+
+  &__list-item
+    color: var(--dark-text)
+
+  &__img-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-top: 20px
+    img
+      max-width: 49%
+      height: auto
+      margin-top: 10px
